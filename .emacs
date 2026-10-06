@@ -71,6 +71,7 @@
 (use-package lsp-ui
   :diminish
   :commands (lsp-ui-mode)
+  :ensure t
   :custom
   (lsp-ui-peek enable t)
   (lsp-ui-doc-enable t)
@@ -81,7 +82,8 @@
   :hook (lsp-mode . lsp-ui-mode))
 
 (use-package company
-  :diminish company-mode)
+  :diminish company-mode
+  :ensure t)
 
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
